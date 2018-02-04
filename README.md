@@ -10,5 +10,5 @@ Some technical details: you need at least PHP 7.1 ro run this application.
 You need to edit the .env file with your mysql (or whatever) username and password, and database name.
 You will also need to create the folder "uploads/userimages" in the public folder, it will hold the user's profile pictures. (for some reason it disappeared...)
 
-I'm not sure what you will also need to install to be able to run the application on your localhost. You can start the server with 
+I assume you will also need to install all the symfony packages to be able to run the application on your localhost. You can start the server with 
 php -S 127.0.0.1:8000 -t public, however, navigating to localhost:8000 will throw an error that autoload.php is missing.
