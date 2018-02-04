@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<section class="container">
+  <div class="topspace"></div>
+
+<h2>{{ user.username | capitalize }}</h2>
+<p>{{ user.firstname | capitalize }} {{ user.surname | capitalize }} </p>
+{% if user.city is not null%}
+<p>{{user.city | capitalize}}, {{ user.country | capitalize }}</p>
+{% endif %}
+ {% if user.image is not null %}
+  <img src="/uploads/userimages/{{image.path}}" alt="profile picture" class="avatar rounded-circle">
+ {% else %}
+ <img src="/images/default_avatar.jpg" alt="profile picture" class="avatar rounded-circle">
+ {% endif %}
+  <div class="topspace"></div>
+<p>{{ user.description }}</p>
+</section>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% form_theme editForm 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+<section class="container">
+  <div class="topspace"></div>
+
+<div class="forms signupform">
+ {{ form_start(editForm, { 'attr': {'class': 'form-control'} }) }}
+ {{ form_widget(editForm) }}
+ {{ form_end(editForm) }}
+</div>
+
+<div class="delete">
+<a class="btn btn-danger" href="/user/actions::deleteAccount" onclick="return confirm('are u sure you want to delete your account? This action cannot be undone')">Delete Account</a>
+</div>
+</section>
+<div class="bottomspace"></div>
+{% endblock %}

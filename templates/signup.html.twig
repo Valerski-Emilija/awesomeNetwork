@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+<section class="container">
+  <div class="topspace"></div>
+
+<h2>Create an account</h2>
+  <div class="forms signupform">
+   {{ form_start(form, { 'attr': {'class': 'form-control'} }) }}
+   {{ form_row(form.username)  }}
+   {{ form_row(form.email)  }}
+   {{ form_row(form.password)}}
+   <span style="display:inline-block">
+   {{ form_row(form.agree) }}
+   </span>
+   <span style="display:inline-block">
+    <a href="/terms-of-use">Terms and conditions</a>
+   </span>
+  {{ form_end(form) }}
+  </div>
+  </section>
+{% endblock %}

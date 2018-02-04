@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<section class="container">
+  <div class="topspace"></div>
+
+<div class="row">
+  <div class="col-md">
+    <div class="alert alert-success" role="alert">
+    <h2>Hello {{ user }}</h2>
+    <p>Your account has been successfully created</p>
+    </div>
+   </div>
+  </div>
+<p><b>What's next?</b> Login to your <a class="text-dark" href="/home"><b>dashbord</b></a>
+and start having fun!</p>
+</section>
+<div class="bottomspace"></div>
+{% endblock %}

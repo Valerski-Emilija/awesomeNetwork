@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<section class="container">
+  <div class="topspace"></div>
+
+<h2>Our awesome members</h2>
+<div class="topspace"></div>
+<div class="row">
+{% for user in users %}
+<div class="col-sm">
+  <div class="user-preview">
+  <a class="text-dark" href="{{ path('user_show', {'username': user.username}) }}">
+  {% if user.image is not null %}
+   <img src="/uploads/userimages/{{user.image.path}}" class="rounded-circle" >
+   {% else %}
+   <img src="/images/default_avatar.jpg" alt="" class="avatar rounded-circle">
+   {% endif %}
+   <span class="username text-center">
+     <p>{{ user.username | capitalize }}</p></a>
+   </span>
+  </div>
+ </div>
+{% endfor %}
+</section>
+<div class="pushdown"></div>
+{% endblock %}

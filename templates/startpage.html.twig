@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<section class="container-fluid startpage">
+{% for message in app.flashes('notice') %}
+<div class="alert alert-success" role="alert">
+{{ message }}
+</div>
+{% endfor %}
+<div class="topspace"></div>
+ <div class="row float-right">
+   <div class="col-sm-8" style="background: rgba(255, 255, 255, 0.7)">
+    <h2 style="color: #974B17">100% made by you.<br>
+    And many awesome members like you.</h2>
+   </div>
+ </div>
+</section>
+<section class="container">
+{% if users|length > 1 %}
+<section class="users">
+<div class="row">
+{% for user in users %}
+<div class="col-sm">
+  <div class="user-preview">
+  {% if user.image is not null %}
+   <img src="/uploads/userimages/{{user.image.path}}" class="rounded-circle" >
+   {% else %}
+   <img src="/images/default_avatar.jpg" alt="" class="avatar rounded-circle">
+   {% endif %}
+   <span class="username text-center">
+     <p>{{ user.username | capitalize }}</p>
+   </span>
+  </div>
+ </div>
+{% endfor %}
+</div>
+<p class="text-center">Have already joined and are waiting for you!</p>
+</section>
+{% endif %}
+<div class="topspace"></div>
+<h3>Our network</h3>
+<p>We are those funny people who like to be in contact, share knowledge,
+Small batch 3 wolf moon poutine, scenester raw denim PBR&B poke meh.
+Offal yr DIY franzen bushwick. Edison bulb snackwave vice, plaid 8-bit man
+ bun four loko pork belly kombucha pour-over iceland DIY cornhole enamel pin.
+Palo santo pinterest man bun godard, selfies 3 wolf moon venmo keytar.
+Art party vexillologist messenger bag, taxidermy mumblecore fingerstache
+mixtape hell of polaroid tote bag bushwick mustache.
+Typewriter kinfolk +1 forage. Typewriter activated charcoal portland
+hell of polaroid meggings, cliche food truck schlitz vaporware YOLO af.
+Quinoa chia master cleanse tumeric trust fund squid bespoke keffiyeh
+drinking vinegar edison bulb aesthetic. Synth etsy edison bulb hexagon.<br>
+So, join us and have fun!
+</p>
+</section>
+{% endblock %}

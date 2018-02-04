@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<section class="container">
+  <div class="topspace"></div>
+<div class="user">
+<a class="text-dark" href="{{ path('user_show', {'username': user.username}) }}">
+{% if user.image is not null %}
+ <img src="/uploads/userimages/{{user.image.path}}" alt="profile picture" class="avatar rounded-circle">
+ {% else %}
+<img src="/images/default_avatar.jpg" alt="profile picture" class="avatar rounded-circle">
+{% endif %}
+<p>Hello <b>{{ user.username | capitalize }}</b>
+</a></p>
+<p>Welcome to your Homepage.</p>
+</div>
+{% for message in app.flashes('notice') %}
+<div class="alert alert-success" role="alert">
+{{ message }}
+</div>
+{% endfor %}
+<div class="dropdown">
+<button class="btn btn-info dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown">Edit my profile</button></li>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+{% if user.image is null %}
+   <li class="dropdown-item"><a class="nav-link" href="/user/actions::uploadPicture">Add a profile picture</a></li>
+   {% else %}
+   <li class="dropdown-item"><a class="nav-link" href="/user/actions::deletePicture" onclick="return confirm('are u sure you want to delete your picture?')">Delete profile picture</a></li>
+   {% endif %}
+   <li class="dropdown-item"><a class="nav-link" href="/user/actions::editProfile">Update informations</a></li>
+</ul>
+</div>
+{% if user.city is not null %}
+<p>How is the weather in {{ user.city | capitalize }} ?</p>
+{% endif %}
+
+</section>
+<div class="bottomspace"></div>
+
+{% endblock %}

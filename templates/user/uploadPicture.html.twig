@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% form_theme uploadForm 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+<section class="container">
+  <div class="topspace"></div>
+
+<h2>Add a picture for your profile</h2>
+<div class="forms signupform">
+ {{ form_start(uploadForm, { 'attr': {'class': 'form-control'} }) }}
+ {{ form_widget(uploadForm) }}
+ {{ form_end(uploadForm) }}
+</div>
+</section>
+<div class="bottomspace"></div>
+{% endblock %}

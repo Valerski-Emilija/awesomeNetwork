@@ -1,0 +1,74 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 110px; /* Margin bottom by footer height,
+  workaround to push the footer to the bottom in case you don't have so much
+  content */
+}
+.header {
+  background-color: #009999;
+}
+.dropdown-toggle{
+  cursor: pointer;
+}
+
+.dropdown-item a {
+  color: #000000 !important;
+}
+
+.forms{
+   width: 500px;
+}
+.signupform, .terms{
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.topspace, .bottomspace{
+  height: 80px
+}
+.startpage {
+  height: 100vh;
+  background-image: url("../images/people.jpeg");
+  background-size: cover;
+  background-position: bottom;
+}
+.users {
+  background: lightgray;
+}
+.user-preview{
+  width: 200px;
+  height: 200px;
+}
+.avatar, .user-preview img{
+  width: 120px;
+  height:120px;
+}
+.user-preview img {
+  margin-top: 15%;
+  margin-left: 20%
+}
+.pushdown{
+  height: 120px
+}
+.footer {
+  /*position: absolute;
+  bottom: 0;*/
+  width: 100%;
+  height: 120px; /* Set the fixed height of the footer here */
+  background-color: #1D7373
+}
+.footer span {
+  position: relative;
+  top: 40px
+}
+.footer span p {
+  color: lightgrey
+}
+@media (min-width: 768px) {
+  .users {
+    position: absolute;
+    top: 30%;
+}
+}
