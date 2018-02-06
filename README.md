@@ -5,7 +5,7 @@ login, logout, create a user's profile with an avatar and a description of thems
 upload or delete a profile picture.
 
 It uses the security bundle to load users from a database and bcrypt to hash the passwords.
-Twig as templating engine, doctrine and ORM for database actions.
+Doctrine and ORM for database actions, Twig as templating engine, Bootstrap4 for the Styles.
 
 Some technical details: you need composer and at least PHP 7.1 to run this application. 
 
