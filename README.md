@@ -5,6 +5,7 @@ login, logout, create a user's profile with an avatar and a description of thems
 upload or delete a profile picture.
 
 It uses the security bundle to load users from a database and bcrypt to hash the passwords.
+Twig as templating engine, doctrine and ORM for database actions.
 
 Some technical details: you need at least PHP 7.1 ro run this application. 
 You need to edit the .env file with your mysql (or whatever) username and password, and database name.
