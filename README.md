@@ -20,5 +20,5 @@ After having cloned or downloaded it, do following steps:
 6) Start the server: run "php -S 127.0.0.1:8000 -t public" in your terminal, and navigate within your browser to "http://localhost:8000/"
 7) Have fun. signup users, login, update profiles, upolad a profile picture, delete profiles. 
 Feel free to add more feautures.
-However, if you want to use it for real world applications, consider all possible bugs and security issues, I am not responsible for this.
+However, if you want to use it for real world applications, consider all possible vulnerabilities and security issues, I am not responsible for this.
 
