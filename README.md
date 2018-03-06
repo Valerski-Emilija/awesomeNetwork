@@ -1,5 +1,5 @@
 # awesomeNetwork
-This is my first project with symfony4. It's a simple user's network application: 
+My first project with symfony4. It's a simple user's network application: 
 users can signup with email, username and password,
 login, logout, create a user's profile with an avatar and a description of themselves, update or delete the profile, 
 upload or delete a profile picture.
@@ -7,11 +7,11 @@ upload or delete a profile picture.
 It uses the security bundle to load users from a database and bcrypt to hash the passwords.
 Doctrine and ORM for database actions, Twig as templating engine, Bootstrap4 for the Styles.
 
-Some technical details: you need composer and at least PHP 7.1 to run this application. 
+Some technical details: you need composer, MySQL and at least PHP 7.1 to run this application. 
 
-After having cloned or downloaded it, do following steps:
+follow those steps:
 
-1) navigate into its folder within a terminal and run "composer install".
+1) run "composer install".
 2) Edit the .env file with your mysql (or whatever) username and password, and database name:        DATABASE_URL=mysql://your_username:your_password@127.0.0.1:3306/your_database_name
 3) Configure your db driver and server_version in config/packages/doctrine.yaml
 4) Create the database: run "php bin/console doctrine:database:create" and the tables: "php bin/console doctrine:migrations:diff" 
